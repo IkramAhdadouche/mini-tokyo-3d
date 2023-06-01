@@ -1,0 +1,90 @@
+MINTOKYO 3D (INSTALACIÓ) 
+
+
+
+Per realitzar el build del projecte Miniotokyo 3D després de clonar-lo i també per obtenir els tokens necessaris, segueix aquests passos:
+
+1. Obtenir els tokens:
+   - Registra't al Public Transportation Open Data Center a través de la seva pàgina web (https://www.odpt.org/).
+   - Segueix el procés de registre i proporciona la informació requerida.
+   - Un cop registrat, rebràs un correu electrònic o seràs redirigit a una pàgina on podràs obtenir el teu token d'accés per a les dades de transport públic.
+   - Copia el token d'accés al porta-retalls.
+
+   - Per obtenir el token de Mapbox, visita el seu lloc web (https://www.mapbox.com/) i crea un compte.
+   - Completa el procés de registre i proporciona la informació requerida.
+   - Un cop registrat, tindràs accés al tauler de control del compte de Mapbox.
+   - En el tauler de control, accedeix a la secció "Access Tokens".
+   - Fes clic al botó "Create a token" per generar un nou token d'accés.
+   - Assigna un nom al token i especifica els permisos necessaris (normalment "Public access" és suficient).
+   - Un cop creat, se't proporcionarà un token d'accés. Copia aquest token al porta-retalls.
+
+2. Crear el fitxer de secrets:
+   - A la carpeta arrel del projecte Miniotokyo 3D, crea un fitxer anomenat "secrets" sense cap extensió.
+   - Obre el fitxer amb un editor de text.
+   - Enganxa el següent fragment JSON al fitxer, reemplaçant "YOUR_ODPT_ACCESS_TOKEN" pel teu token d'accés del Public Transportation Open Data Center:
+
+     ```json
+     {
+         "odpt": "YOUR_ODPT_ACCESS_TOKEN"
+     }
+     ```
+
+     Desa el fitxer.
+
+3. Actualitzar el token de Mapbox:
+   - Obre el fitxer "index.html" que es troba a la carpeta "build" del projecte Miniotokyo 3D.
+   - Cerca la línia on es passa el token d'accés de Mapbox al constructor del mapa.
+   - Reemplaça el token d'accés existent pel teu token de Mapbox.
+   - Desa el fitxer "index.html".
+
+4. Fer el build del projecte:
+   - A la terminal, navega fins al directori arrel del projecte Miniotokyo 3D, on es troba el fitxer "package.json".
+   - Executa la següent comanda per instal·lar les dependències del projecte:
+
+     ```
+     npm install
+     ```
+
+   - Un cop les dependències s'hagin instal·lat amb èxit, executa la comanda següent per realitzar el build del projecte:
+
+     ```
+     npm run build-all
+     ```
+
+   - Aquesta comanda dispararà l'script de build definit al fitxer "package.json", generant els fitxers necessaris al directori "build".
+
+Amb aquests passos, hauries de tenir els tokens d'accés necessaris per al Public Transportation Open
+
+ Data Center i Mapbox, i el projecte Miniotokyo 3D hauria de ser construït amb èxit. Assegura't de seguir les instruccions addicionals proporcionades per la documentació del projecte Miniotokyo 3D per executar l'aplicació amb èxit.
+
+
+
+
+AFEGIR ALGO SEMBLANT DE MINTOKYO3D A CERCALIA ? 
+
+ Si estàs fent servir el servei de mapes de Cercanías Renfe (Cercalia) i vols crear una aplicació similar a Miniotokyo 3D, aquí tens una guia general sobre com procedir:
+
+1. Obtén les claus d'accés de Cercanías Renfe:
+   - Visita el lloc web de Cercanías Renfe o Cercalia per obtenir informació sobre com obtenir les claus d'accés per utilitzar el seu servei de mapes. Potser hauràs de registrar-te o sol·licitar les claus d'accés a través de correu electrònic.
+   - Segueix els passos o instruccions proporcionades per obtenir les claus d'accés. Potser hauràs de crear un compte o rebre les claus d'accés directament des dels administradors del servei.
+   - Un cop obtinguis les claus d'accés, guarda-les en un lloc segur, ja que les necessitaràs per accedir als mapes de Cercanías Renfe.
+
+2. Crea el teu projecte:
+   - Decideix quina tecnologia o framework vols utilitzar per desenvolupar l'aplicació. Algunes opcions populars per a desenvolupament web inclouen React, Angular o Vue.js. Pots triar el que més t'agradi o el que sigui més compatible amb els teus coneixements i necessitats.
+   - Configura un nou projecte utilitzant la tecnologia o framework triat. Pots utilitzar eines com create-react-app per React, Angular CLI per Angular o Vue CLI per Vue.js per crear un projecte base.
+   - Assegura't de tenir Node.js instal·lat en el teu sistema, ja que moltes d'aquestes eines depenen d'ell.
+
+3. Incorpora el mapa de Cercanías Renfe:
+   - Utilitza la llibreria o API proporcionada per Cercanías Renfe per incorporar el mapa a la teva aplicació. Consulta la documentació o les guies proporcionades per Cercalia per entendre com fer-ho.
+   - Normalment, hauràs de proporcionar les claus d'accés que has obtingut en el pas anterior per autenticar-te amb el servei de mapes de Cercanías Renfe i obtenir les dades del mapa.
+   - Segueix els exemples o les guies proporcionades per Cercalia per mostrar el mapa a la teva aplicació. Això pot implicar la configuració d'un component o vista, la definició de coordenades, la personalització de les capes del mapa i altres paràmetres segons les teves necessitats.
+
+4. Afegir funcionalitats adicionals:
+   - Una vegada que el mapa estigui incorporat a la teva aplicació, pots afegir funcionalitats addicionals similars a les de Miniotokyo 3D. Això pot incloure la visualització de dades en temps real, interacció amb els elements del mapa, personalització de capes o afegir efectes visuals.
+   - Implementa les funcions que et semblin rellevants per a la teva aplicació i fes-ne ús dels serveis o dades
+
+ que Cercanías Renfe o altres fonts externes proporcionin.
+   - Pots consultar tutorials, exemples o documentació de desenvolupament web general per aprendre com implementar aquestes funcions o sol·licitar assistència en fòrums o comunitats de desenvolupadors.
+
+Recordeu respectar sempre els termes d'ús del servei de Cercanías Renfe o Cercalia i assegureu-vos de seguir les seves directrius i restriccions específiques al desenvolupar la vostra aplicació utilitzant els seus serveis de mapes.
+
